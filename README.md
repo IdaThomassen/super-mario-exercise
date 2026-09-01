@@ -65,118 +65,23 @@ Performance score: 73
 ---
 # Opgave 3 – Kontrollér billedkvaliteten
 
-En mindre fil er ikke automatisk et bedre billede.
+Jeg tjekkede alle billeder igennem, også dem der blev større ved at blive til WebP.
+Jeg oplevede ikke at kvaliteten ændret sig, hverken da de blev mindre eller større. 
 
-Efter konverteringen skal du kontrollere hvert WebP-billede visuelt.
-
-## Forkert
-
-```text
-JPG: 800 KB
-WebP: 35 KB
-```
-
-hvis WebP-versionen samtidig har tydelige komprimeringsfejl eller dårlig billedkvalitet.
-
-### Hvorfor er det et problem?
-
-En meget lille fil kan være så hårdt komprimeret, at billedkvaliteten bliver synligt dårlig.
-
-## Korrekt princip
-
-Find en balance mellem:
-
-```text
-lavere filstørrelse
-+
-acceptabel visuel kvalitet
-```
-
-### Hvorfor er dette bedre?
-
-Du forbedrer performance uden at ødelægge brugeroplevelsen.
-
-Sammenlign originalen og WebP-versionen i browseren.
-
-Hvis kvaliteten ikke er tilfredsstillende, skal du eksportere billedet igen med en højere kvalitetsindstilling.
 
 ---
 
-# Opgave 4 – Opdatér billedreferencer og brug lazy loading med omtanke
+# Opgave 4 – Opdatering af billedreferencer og lazy loading 
 
-Når billederne er konverteret, skal HTML-filerne opdateres.
+### Opdatering
+Opdatering af billedereference: alle nødvendige opdateringer er fortaget
 
-## Forkert
 
-```html
-<img src="img/thumb-1.jpg" alt="...">
-```
+### Lazy loading
 
-hvis du ønsker at anvende den nye WebP-version.
-
-### Hvorfor er det et problem?
-
-Browseren fortsætter med at hente den gamle JPG-fil, selvom du har oprettet en WebP-version.
-
-## Korrekt princip
-
-```html
-<img src="img/thumb-1.webp" alt="...">
-```
-
-### Hvorfor er dette bedre?
-
-Browseren indlæser nu den nye optimerede billedfil.
-
-Kontrollér alle fire HTML-filer.
-
-Brug Chrome DevTools eller browserens **Network-panel** til at kontrollere, at de nye WebP-filer faktisk bliver hentet.
-
----
-
-## Lazy loading
-
-Billeder længere nede på siden kan være relevante at lazy-loade.
-
-Eksempel:
-
-```html
-<img
-    src="img/thumb-1.webp"
-    alt="..."
-    loading="lazy"
->
-```
-
-## Forkert princip
-
-```html
-<img
-    src="img/banner.webp"
-    alt="..."
-    loading="lazy"
->
-```
-
-hvis banneret er et vigtigt billede, som vises med det samme øverst på siden.
-
-### Hvorfor er det et problem?
-
-Et vigtigt billede over folden bør normalt ikke forsinkes unødigt.
-
-## Korrekt princip
-
-```text
-Banner / hero-billede øverst på siden
-→ normalt ikke loading="lazy"
-
-Thumbnail eller andet billede længere nede
-→ loading="lazy" kan være relevant
-```
-
-### Hvorfor er dette bedre?
-
-Browseren kan prioritere de vigtigste ressourcer først og udsætte billeder, som brugeren endnu ikke kan se.
+Lazy loading er blivet tilføjet på siden games.html 
+Dette er gjort da der kommer 6 billeder efter hinanden, så brugeren skal scrolle ned for at se. 
+Jeg har tilføjet det til de sidste 4 billeder på siden.
 
 ---
 
