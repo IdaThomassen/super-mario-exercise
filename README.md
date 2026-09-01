@@ -113,109 +113,11 @@ Mario kart start linje, med Mario i front. Luigi er bag ved Mario på hans højr
 
 # Opgave 6 – Undersøg sidernes headingstruktur med HeadingsMap
 
-Brug Chrome Extension **HeadingsMap** til at undersøge headingstrukturen på alle fire sider.
 
-Kør først HeadingsMap **inden du ændrer HTML-koden**.
 
-På `index.html` vil starterkoden eksempelvis vise en struktur i denne retning:
 
-```text
-h1 Marioclub
-├── h2 Welcome to Marioclub
-├── h2 It's a me, Mario
-└── h2 Join Today!
-```
 
-## Analysér strukturen
 
-HeadingsMap viser sidens headinghierarki, men værktøjet fortæller ikke nødvendigvis, om strukturen er den mest meningsfulde.
-
-Overvej derfor:
-
-- Hvad er website-branding?
-- Hvad er den aktuelle sides hovedemne?
-- Hvilken tekst bør være sidens primære `h1`?
-- Hvilke headings hører under sidens hovedemne?
-- Er headingniveauerne valgt ud fra indholdets struktur eller ud fra tekstens visuelle størrelse?
-
-Website-navnet `Marioclub` kan fungere som branding og link til forsiden uden nødvendigvis at være en heading.
-
-Et muligt forbedret princip kan være:
-
-```text
-h1 Sidens hovedemne
-├── h2 Underemne
-└── h2 Underemne
-```
-
-Du skal selv beslutte den konkrete headingstruktur på hver side og kunne begrunde dit valg.
-
-> Vælg headingniveau ud fra indholdets hierarki – ikke ud fra tekstens størrelse eller placering.
-
----
-
-## Kontrollér CSS efter ændringer i HTML
-
-Når du ændrer HTML-elementer, kan det påvirke eksisterende CSS.
-
-Starterprojektets stylesheet indeholder eksempelvis selectors, som er knyttet til bestemte HTML-elementer.
-
-Eksempel:
-
-```css
-header h1 {
-    color: white;
-    border: 8px solid white;
-    display: inline-block;
-    padding: 6px 12px;
-    border-radius: 36px;
-}
-```
-
-Hvis du ændrer HTML-strukturen, kan denne selector derfor holde op med at ramme det ønskede element.
-
-Efter ændringer i headingstrukturen skal du:
-
-1. gemme HTML-filen
-2. genindlæse siden i browseren
-3. kontrollere, om designet stadig ser korrekt ud
-4. undersøge relevante CSS-selectors
-5. tilpasse CSS, hvis dine HTML-ændringer har påvirket designet
-
-### Vigtigt princip
-
-```text
-Ændr HTML-semantik
-        ↓
-kontrollér CSS
-        ↓
-tilpas selectors efter behov
-        ↓
-bevar både korrekt semantik og design
-```
-
-Du skal ikke beholde et uhensigtsmæssigt HTML-element alene for at bevare en bestemt styling.
-
----
-
-## Test headingstrukturen igen
-
-Når du har ændret headingstrukturen:
-
-1. Gem HTML-filen.
-2. Genindlæs siden i browseren.
-3. Kør HeadingsMap igen.
-4. Sammenlign strukturen før og efter.
-5. Kontrollér samtidig, at ændringen ikke har ødelagt sidens visuelle design.
-
-Kontrollér:
-
-```text
-index.html
-news.html
-games.html
-contact.html
-```
 
 ---
 
