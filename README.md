@@ -113,7 +113,8 @@ Mario kart start linje, med Mario i front. Luigi er bag ved Mario på hans højr
 
 # Opgave 6 – Undersøg sidernes headingstruktur med HeadingsMap
 
-
+Jeg har forbedr headingstrukturen og semantik.
+Jeg har fået hjælp af ChatGPT til at forstår hvordan det kunne struktureres. 
 
 
 
