@@ -87,54 +87,27 @@ Jeg har tilføjet det til de sidste 4 billeder på siden.
 
 # Opgave 5 – Gennemgå billedernes alt-tekster
 
-Web performance handler om filstørrelse og loadingtid.
+### Nye alt tekster:
+#### Banner
+Banner med guld baggrund med Mario ikoner, Mario figuren er i højre side og holder en klods med spørgsmåls tegn på.
 
-Webtilgængelighed handler også om, hvorvidt billedets betydning er tilgængelig for brugere, der ikke kan se billedet.
+#### Thumb-1
+Mario og Yoshi hopper efter mønter.
 
-I starterkoden findes eksempelvis:
+#### Thumb-2
+Mario svømmer efter mønter under vandet og prøver at undgå fisk med pikke.
 
-```html
-<img src="img/thumb-1.jpg" alt="mario thumbnail 1">
-```
+#### Thumb-3
+Info billede af Super Mario, viser Mario, Super Mario logoet og lidt af Super Mario verden.
 
-## Forkert
+#### Thumb-4
+Super Mario, Luigi, Daisy og andre Mario karakter kommer løbende. Baggrunden viser Super Mario verden.
 
-```html
-<img src="img/thumb-1.webp" alt="mario thumbnail 1">
-```
+#### Thumb-5
+Mario og Luigi bygger deres egen Super Mario verden.
 
-### Hvorfor er det et problem?
-
-Alt-teksten beskriver primært billedets fil- eller layoutrolle og ikke nødvendigvis billedets relevante indhold eller funktion.
-
-## Korrekt princip
-
-Hvis billedet har betydning for indholdet, skal `alt` kort beskrive billedets relevante indhold eller funktion.
-
-Eksempel:
-
-```html
-<img
-    src="img/example.webp"
-    alt="Mario jumping over an obstacle"
->
-```
-
-Hvis billedet udelukkende er dekorativt, skal du overveje:
-
-```html
-alt=""
-```
-
-### Hvorfor er dette bedre?
-
-En meningsfuld alt-tekst giver brugere af skærmlæsere adgang til billedets relevante information.
-
-Et dekorativt billede med `alt=""` kan derimod ignoreres af skærmlæsere, så brugeren ikke præsenteres for unødvendig information.
-
-Eksemplet ovenfor er kun et eksempel. Du skal selv skrive en alt-tekst, der passer til det konkrete billede.
-
-Du skal selv kunne forklare, hvorfor du har valgt den enkelte alt-tekst.
+#### Thumb-6
+Mario kart start linje, med Mario i front. Luigi er bag ved Mario på hans højre side. På venstre side bag Mario er Daisy og Bowser. Daisy er foran Bowser.
 
 ---
 
