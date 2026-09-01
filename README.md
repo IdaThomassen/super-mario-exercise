@@ -117,50 +117,11 @@ Jeg har forbedr headingstrukturen og semantik.
 Jeg har fået hjælp af ChatGPT til at forstår hvordan det kunne struktureres. 
 
 
-
-
-
 ---
 
 # Opgave 7 – Markér den aktuelle side i navigationen
 
-Navigationen viser visuelt den aktive side med en CSS-klasse:
-
-```html
-<a href="news.html" class="join">Latest news</a>
-```
-
-## Forkert
-
-```html
-<a href="news.html" class="join">Latest news</a>
-```
-
-### Hvorfor er det et problem?
-
-En CSS-klasse fortæller ikke i sig selv hjælpemidler, at dette link repræsenterer den aktuelle side.
-
-## Korrekt princip
-
-```html
-<a
-    href="news.html"
-    class="join"
-    aria-current="page"
->
-    Latest news
-</a>
-```
-
-### Hvorfor er dette bedre?
-
-`aria-current="page"` gør det muligt for hjælpemidler at identificere den aktuelle side i navigationen.
-
-Tilføj `aria-current="page"` til det aktive navigationslink på hver side.
-
-Der må kun være én aktuel side i denne navigation ad gangen.
-
-> Brug native semantisk HTML først. Tilføj ARIA, når der er et konkret behov.
+Jeg har tilføjet aria-current, så brugeren ved hvor de er selvom de ikke kan se hvor de er.
 
 ---
 
