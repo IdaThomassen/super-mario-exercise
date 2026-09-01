@@ -18,104 +18,51 @@ Performance score: 73
 ---
 # Opgave 2 – Billede optimering 
 
-Sitet anvender flere billeder i JPG-format.
+### Banner
+- Konverteret fra jpg(1.8 MB)  til WebP(238 kB)
+- Kvaliteten er stadig fin
+- Beholdt størrelsen
 
-Eksempel:
+### Drmario
+- Kan slettes da jeg ikke kan finde den
 
-```html
-<img src="img/banner.jpg" alt="marioclub welcome banner">
-```
+### Favicon
+- Kan ikke optimers da det er en emoji
 
-Du skal undersøge billedernes:
+### Thumb-1
+- Konverteret fra jpg(233 kB)  til WebP(68,8 kB)
+- Kvaliteten er det samme
+- Beholdt størrelsen
 
-- dimensioner
-- filstørrelse
-- visuelle kvalitet
+### Thumb-2
+- Konverteret fra jpg(336 kB)  til WebP(72,9 kB)
+- Kvaliteten er det samme
+- Beholdt størrelsen
 
-Konvertér de relevante JPG-billeder til **WebP**. Hvis der også findes andre tunge rasterbilleder i `img`-mappen, skal du vurdere, om de ligeledes bør optimeres.
+### Thumb-3
+- Konverteret fra jpg(246 kB)  til WebP(166 kB)
+- Kvaliteten er det samme
+- Beholdt størrelsen
 
-## Forkert
+### Thumb-4
+- Konverteringen gjorde den større. Den gik fra 313 til 369 kB.
+- Kvaliteten er det samme
+- Beholdt størrelsen
+- Valgte ikke at ændre den til den nye
 
-Det er ikke nok blot at ændre filendelsen i HTML:
+### Thumb-5
+- Konverteringen gjorde den større. Den gik fra 175 til 209 kB.
+- Kvaliteten er det samme
+- Beholdt størrelsen
+- Valgte ikke at ændre den til den nye
 
-```html
-<img src="img/banner.webp" alt="marioclub welcome banner">
-```
-
-hvis filen stadig kun eksisterer som:
-
-```text
-banner.jpg
-```
-
-### Hvorfor er det et problem?
-
-Browseren forsøger at hente en fil, som ikke findes.
-
-## Korrekt princip
-
-Først konverteres billedfilen:
-
-```text
-banner.jpg
-→
-banner.webp
-```
-
-Derefter ændres HTML:
-
-```html
-<img src="img/banner.webp" alt="...">
-```
-
-### Hvorfor er dette bedre?
-
-HTML-koden peger nu på den faktiske optimerede billedfil.
+### Thumb-6
+- Konverteringen gjorde den større. Den gik fra 121 til 134 kB.
+- Kvaliteten er det samme
+- Beholdt størrelsen
+- Valgte ikke at ændre den til den nye
 
 ---
-
-## Programmer til WebP-konvertering
-
-Du behøver ikke bruge terminalen til denne opgave.
-
-Du kan eksempelvis bruge et af følgende programmer med grafisk brugerflade:
-
-### Adobe Photoshop
-
-Kan eksportere billeder til WebP og giver mulighed for at justere kvalitet og komprimering.
-
-### GIMP
-
-Gratis og open source.
-
-GIMP findes til både macOS og Windows og kan eksportere direkte til WebP.
-
-### XnConvert
-
-Et grafisk værktøj til macOS, Windows og Linux.
-
-XnConvert er særligt velegnet, hvis du skal konvertere flere billeder på én gang.
-
-### WebP Converter / AnyWebP – macOS
-
-Et simpelt grafisk program til konvertering mellem blandt andet JPG, PNG og WebP.
-
-Hvis dit WebP-konverteringsprogram kan:
-
-- konvertere JPG eller PNG til WebP
-- bevare den ønskede billedkvalitet
-- eventuelt justere komprimeringsniveauet
-
-er det tilstrækkeligt til denne øvelse.
-
-### ImageMagick – valgfrit
-
-ImageMagick er et mere avanceret værktøj, som blandt andet kan konvertere, ændre størrelse på, beskære og optimere billeder.
-
-Det er **ikke et krav** at bruge ImageMagick i denne opgave.
-
----
-
 # Opgave 3 – Kontrollér billedkvaliteten
 
 En mindre fil er ikke automatisk et bedre billede.
