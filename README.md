@@ -207,166 +207,33 @@ Resten brugte den automatiske focus der allerede findes på siden.
 
 # Opgave 11 – Kør Lighthouse igen
 
-Når du har gennemført optimeringerne, skal du køre Lighthouse igen.
+Performance:
 
-Brug samme indstillinger som i din første test.
+Før: 73
 
-Sammenlign:
+Efter: 93
 
-```text
-Før optimering
-vs.
-Efter optimering
-```
+Accessibility:
 
-Dit mål er en **Performance-score på 90 eller højere**.
+Efter: 96
 
-Kør også Lighthouse-kategorien **Accessibility**.
-
-Lighthouse kan hjælpe med at finde en række accessibility-problemer, men en høj Lighthouse-score er ikke i sig selv bevis på, at en side er fuldt tilgængelig.
-
-Du skal derfor kombinere Lighthouse med:
-
-- WAVE
-- HeadingsMap
-- manuel tastaturtest
-- kontrol af formularlabels
-- kontrol af `autocomplete`
-- kontrol af alt-tekster
-- HTML-validering
-
----
-
-# Dokumentér dine resultater
-
-Notér resultaterne før og efter optimering.
-
-Du kan eksempelvis bruge denne tabel:
-
-| Side | Performance før | Performance efter | Accessibility efter |
-|---|---:|---:|---:|
-| `index.html` |  |  |  |
-| `news.html` |  |  |  |
-| `games.html` |  |  |  |
-| `contact.html` |  |  |  |
-
-Skriv derefter kort:
-
+--- 
 1. Hvilke ændringer gav den største performanceforbedring?
+Billeder: fra jpg til WebP
+
 2. Hvilke accessibility-problemer fandt du?
+Heading-strukturen, manglende labels i formularerne og manglende autocomplete-værdier.
+
 3. Hvilke problemer kunne Lighthouse finde?
+Farvekontrast, billedoptimering og semantisk HTML.
+
 4. Hvilke problemer fandt WAVE?
+Ingen fejl ud over kontrast og lange alt-tekster.
+
 5. Hvilke problemer krævede HeadingsMap eller manuel kontrol?
+Selve strukturen og hierarki.
+
 6. Hvad har du lært om sammenhængen mellem performance og accessibility?
-
----
-
-# Kontrol af din løsning
-
-Inden du afslutter opgaven, skal du kontrollere:
-
-- [ ] Lighthouse er kørt før ændringerne.
-- [ ] Performance-resultaterne før optimering er dokumenteret.
-- [ ] Relevante billeder er konverteret til WebP.
-- [ ] HTML-filerne anvender de nye WebP-filer.
-- [ ] Billedkvaliteten er kontrolleret.
-- [ ] Relevante billeder længere nede på siden bruger `loading="lazy"`.
-- [ ] Vigtige billeder øverst på siden er ikke lazy-loadet uden grund.
-- [ ] Alt-teksterne er gennemgået.
-- [ ] Dekorative billeder er vurderet i forhold til `alt=""`.
-- [ ] Headingstrukturen er kontrolleret med HeadingsMap både før og efter ændringer.
-- [ ] Den aktuelle navigationsside anvender `aria-current="page"`.
-- [ ] Formularfelter har relevante labels.
-- [ ] `for` og `id` matcher.
-- [ ] `textarea` har et label.
-- [ ] `datalist`-input har et label.
-- [ ] Relevante `autocomplete`-værdier er anvendt.
-- [ ] Formularer har en tydelig submit-handling.
-- [ ] Eksisterende gyldige submit-kontroller er vurderet, før de eventuelt ændres.
-- [ ] Dokumentets tegnsæt er kontrolleret og er korrekt angivet med `<meta charset="utf-8">`.
-- [ ] `<head>` er organiseret i en logisk og læsbar rækkefølge.
-- [ ] Dokumentets primære sprog er angivet med `lang="en"` på `<html>`.
-- [ ] Alle fire sider har en unik og beskrivende `<title>`.
-- [ ] CSS er kontrolleret efter ændringer i HTML-strukturen.
-- [ ] Alle fire sider er testet med WAVE.
-- [ ] Relevante WAVE Errors er undersøgt og udbedret.
-- [ ] WAVE Contrast Errors er undersøgt og udbedret, hvor det var nødvendigt.
-- [ ] WAVE Alerts er undersøgt og vurderet.
-- [ ] Alle interaktive elementer har en tydelig synlig fokusmarkering.
-- [ ] Siderne er testet med tastatur.
-- [ ] HTML-koden er valideret.
-- [ ] Lighthouse er kørt igen efter optimering.
-- [ ] Performance-score er 90 eller højere.
-- [ ] Resultater før og efter er sammenlignet.
-
----
-
-# Værktøjer i opgaven
-
-| Værktøj | Anvendelse |
-|---|---|
-| **Lighthouse** | Performance og overordnet accessibility-audit før og efter optimering |
-| **WAVE** | Accessibility-fejl, kontrast, alerts, struktur og ARIA |
-| **HeadingsMap** | Visualisering og analyse af headinghierarki |
-| **Chrome DevTools** | Network, responsive test og undersøgelse af HTML/CSS |
-| **W3C Validator** | Validering af HTML-koden |
-| **Tastatur** | Manuel test af navigation, formularer og fokus |
-
----
-
-# Useful Links / Nyttige links
-
-## Chrome DevTools
-
-[Chrome DevTools](https://developer.chrome.com/docs/devtools/)
-
-## Lighthouse
-
-[Lighthouse](https://developer.chrome.com/docs/lighthouse/)
-
-[Lighthouse i Chrome DevTools](https://developer.chrome.com/docs/devtools/lighthouse/)
-
-## WebP
-
-[Google WebP](https://developers.google.com/speed/webp/)
-
-## Billedværktøjer
-
-[GIMP](https://www.gimp.org/)
-
-[GIMP – Export Image as WebP](https://docs.gimp.org/3.0/en/file-webp-export.html)
-
-[XnConvert](https://www.xnview.com/en/xnconvert/)
-
-[ImageMagick](https://imagemagick.org/)
-
-## Accessibility-værktøjer
-
-- WAVE Evaluation Tool – Chrome Extension
-- HeadingsMap – Chrome Extension
-
-## HTML og accessibility
-
-[MDN – Heading elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements)
-
-[MDN – label](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/label)
-
-[MDN – placeholder](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/placeholder)
-
-[MDN – autocomplete](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete)
-
-[MDN – button](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/button)
-
-[MDN – datalist](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/datalist)
-
-[MDN – aria-current](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-current)
-
-[W3C – Understanding Identify Input Purpose](https://www.w3.org/WAI/WCAG22/Understanding/identify-input-purpose.html)
-
-[W3C HTML Validator](https://validator.w3.org/)
-
----
-
-## Afsluttende note
-
-> Udviklet til studerende på **3. semester**. Ingen AI-værktøjer er nødvendige — opgaven kan løses med en browser, en teksteditor, et tastatur og et simpelt billedværktøj.
+Begge områder påvirker brugerens oplevelse af hjemmesiden.
+En hurtigere hjemmeside gør det lettere for brugeren at komme til indholdet.
+Accessibility sikrer at flere brugere kan forstå og anvende hjemmesiden.
