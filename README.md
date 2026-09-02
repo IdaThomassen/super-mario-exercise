@@ -138,135 +138,70 @@ Jeg har forbedret formularernes tilgængelighed ved at tilføje labels og autoco
 Viewport var allerede korrekt angivet, og stylesheetet var også korrekt sat ind. Der manglede en charset-angivelse, og <html>-elementet manglede en lang-attribut. Derudover havde alle fire sider samme generiske <title>, som blev ændret beskrivende titler.
 
 ---
+# Opgave 10 – Test webtilgængelighed med WAVE og tastatur
 
 ## 10.1 – Test alle sider med WAVE
 
-Installér **WAVE Evaluation Tool** som Chrome Extension.
+WAVE blev kørt på alle fire sider. Der blev ikke fundet nogen Errors, men WAVE fandt nogle enkelte Contrast Errors. Jeg gennemgik dem for at vurdere, hvilke HTML- og CSS-elementer der skulle ændres. Jeg gennemgik også Alerts, Features, Structure og ARIA for at vurdere, om der var elementer, der krævede manuel kontrol.
 
-Kør WAVE på:
-
-```text
-index.html
-news.html
-games.html
-contact.html
-```
-
-Undersøg især kategorierne:
-
-```text
-Errors
-Contrast Errors
-Alerts
-Features
-Structure
-ARIA
-```
-
-Du skal ikke blot forsøge at få alle markeringer til at forsvinde.
-
-Undersøg først:
-
-1. Hvad fortæller WAVE?
-2. Hvilket HTML- eller CSS-element handler markeringen om?
-3. Hvorfor er det et problem?
-4. Kræver det faktisk en ændring?
-5. Hvordan kan problemet løses uden at ødelægge sidens funktion eller design?
-
-> WAVE er et analyseværktøj – ikke en automatisk facitliste.
+index.html: 0 fejl
+news.html: 0 fejl
+games.html: 0 fejl
+contact.html: 0 fejl
 
 ---
 
 ## 10.2 – Undersøg Errors
 
-Hvis WAVE finder fejl, skal du undersøge dem og rette relevante problemer.
-
-Det kan eksempelvis være:
-
-```text
-Missing form label
-Language missing or invalid
-```
-
-Brug WAVE til at lokalisere det konkrete element, og undersøg derefter HTML-koden i VS Code.
-
-Når du har rettet problemet, skal du køre WAVE igen.
+Da der ikke blev fundet fejl, var der ikke noget at rette.
 
 ---
 
 ## 10.3 – Undersøg Contrast Errors
 
-WAVE kan identificere tekst, hvor kontrasten mellem tekstfarve og baggrund er utilstrækkelig.
+### Kontrast fejl fundet af WAVE:
 
-Hvis WAVE finder en kontrastfejl:
+index.html: 4 fejl
+news.html: 4 fejl
+games.html: 4 fejl
+contact.html: 4 fejl
 
-1. Find det relevante element.
-2. Undersøg de anvendte farver i `css/style.css`.
-3. Tilpas tekstfarve eller baggrundsfarve.
-4. Bevar så vidt muligt sidens visuelle udtryk.
-5. Kør WAVE igen og kontrollér, om problemet er løst.
+Alle fejl er ens. Problemerne er logo i toppen (hvid/rød), tekst på banner (hvid/gul) og tekst i bunden (hvid/rød)
+Løsning:
+Logo i toppen: Gik fra F63232 til c82929, den blev mere nedtonet.
+Tekst på banner: Denne valgte jeg ikke at ændre. Gul er meget svær at ændre for at kontrasten er god. Man skal næsten over i brun før den er ok.
+Tekst i bunden: Gik fra F63232 til c82929, den blev mere nedtonet.
 
-Du skal ikke ændre farver tilfældigt. Brug værktøjets information til at finde den konkrete CSS-regel, der giver problemet.
+Nu har alle sider kun 2 fejl, men de er bevidste. 
 
 ---
 
 ## 10.4 – Undersøg Alerts
 
-Et **Alert** i WAVE er ikke nødvendigvis en accessibility-fejl.
+Alerts:
+For lange alt-tekster 
+Et link der sender til forsiden
 
-Hvis WAVE viser et alert, skal du:
-
-- undersøge hvorfor elementet markeres
-- vurdere om koden faktisk bør ændres
-- kunne forklare din beslutning
-
-Det er vigtigt at kunne skelne mellem:
-
-```text
-automatisk fundet fejl
-og
-noget der kræver menneskelig vurdering
+Jeg har valgt ikke at ændre disse. 
+Alt-teksterne bruges til at beskrive billederne, så det er svært, at gøre beskrivelse kortere uden at miste hvad billedet viser.
+Link ved jeg ikke hvor den ellers ville skulle sende brugeren hen.
 ```
 
 ---
 
 ## 10.5 – Test også med tastatur
 
-Efter WAVE-testen skal du teste alle sider uden mus.
+Efter tjek af alle sider, var der især to der var svære at se. 
+form button:focus
+form input:focus
 
-Brug:
+Begge havde en stiblet linje om sig. 
+Det blev ændret til:
 
-```text
-Tab
-Shift + Tab
-Enter
-```
+border: 4px solid rgb(37, 211, 74);
 
-Kontrollér:
+Resten brugte den automatiske focus der allerede findes på siden.
 
-- Kan du nå alle links?
-- Kan du nå alle formularfelter?
-- Kan du nå submit-knapper?
-- Kan navigationen bruges med tastaturet?
-- Følger fokus en logisk rækkefølge?
-- Kan du tydeligt se, hvilket element der har fokus?
-
-Starterprojektets CSS indeholder allerede egne fokusregler.
-
-Eksempel:
-
-```css
-form input:focus {
-    border: 4px dashed #4B4B4B;
-    outline: none;
-}
-```
-
-`outline: none` er ikke automatisk en accessibility-fejl, hvis browserens standardfokus erstattes af en tydelig fokusindikator.
-
-Din opgave er derfor at **teste fokusmarkeringen**, ikke blot at fjerne eller erstatte CSS-reglen mekanisk.
-
-Hvis fokus ikke er tydeligt nok, skal du forbedre CSS'en og teste igen.
 
 ---
 
